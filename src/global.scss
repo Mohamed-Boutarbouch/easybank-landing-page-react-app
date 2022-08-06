@@ -1,70 +1,120 @@
+@forward './styles';
+@use './styles' as f;
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+/* ---------------------------- */
+/* Custom Properties            */
+/* ---------------------------- */
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  /* Colors */
+  /* This is the modern way of writing hsl values to do an alpha trick (see example colors section)  */
+  --clr-primary-dark-blue: hsl(233, 26%, 24%);
+  --clr-primary-lime-green: hsl(136, 65%, 51%);
+  --clr-primary-bright-cyan: hsl(192, 70%, 51%);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --clr-primary-lime-green-hover: hsl(136, 61%, 64%);
+  --clr-primary-bright-cyan-hover: hsl(192, 70%, 64%);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --clr-gradient: linear-gradient(
+    to right,
+    var(--clr-primary-lime-green),
+    var(--clr-primary-bright-cyan)
+  );
+
+  --clr-neutral-grayish-blue: hsl(233, 8%, 62%);
+  --clr-neutral-light-grayish-blue: hsl(220, 16%, 96%);
+  --clr-neutral-very-light-gray: hsl(0, 0%, 98%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* Font Sizes */
+  // You can use the property clamp if you want to:
+  // clamp(28px, 16px + 2vw, 40rem) which is ==>
+  // clamp(1.75rem, 1rem + 2vw, 2.5rem)
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  // spacing
+  // --space: clamp(f.rem(1), 90vw, f.rem(1120));
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* ---------------------------- */
+/* Reset                        */
+/* ---------------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body {
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+picture,
+figure {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+}
+
+/* Fix font weight problem */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up body */
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-dark));
+  line-height: 1.5;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+body {
+  overflow-x: hidden;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

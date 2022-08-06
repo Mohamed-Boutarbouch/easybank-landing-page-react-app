@@ -1,0 +1,42 @@
+@use '../styles/' as f;
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: f.rem(10) f.rem(70);
+  background-color: var(--clr-neutral-white);
+  justify-content: space-around;
+  position: relative;
+
+  .link-wrapper {
+    .link-list {
+      display: flex;
+      gap: f.rem(35);
+      text-decoration: none;
+      list-style: none;
+
+      .link {
+        text-decoration: none;
+        color: var(--clr-neutral-grayish-blue);
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+
+      .link:hover {
+        color: var(--clr-primary-dark-blue);
+      }
+
+      .link::after {
+        content: '';
+        display: inline-block;
+        height: 0.2rem;
+        background: linear-gradient(to right, #31d35c, #2bb7da);
+        position: absolute;
+        inset: 0 0 0 0;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.4s;
+      }
+    }
+  }
+}

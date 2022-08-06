@@ -1,0 +1,31 @@
+@use 'functions' as f;
+
+$breakpoints-up: (
+  'md': f.em(700),
+  'lg': f.em(900),
+  'xl': f.em(1440),
+);
+
+$breakpoints-down: (
+  'sm': em(699.98),
+  'md': em(899.98),
+  'lg': em(1439.98),
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// how to use it:
+// @use '../utils' as u;
+// @include u.breakpoint(lg) {
+//   // Your code
+// }

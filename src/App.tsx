@@ -1,12 +1,13 @@
-import styles from './App.module.scss';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 
 const App = () => {
-
   return (
-    <div className={styles.App}>
-      <h1>Hello</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
-}
+};
 
 export default App;
