@@ -1,0 +1,33 @@
+@use '../styles/' as f;
+
+.container {
+  background-color: var(--clr-neutral-light-grayish-blue);
+  padding: f.rem(100) f.rem(70);
+  color: var(--clr-neutral-grayish-blue);
+
+  .header h2 {
+    color: var(--clr-primary-dark-blue);
+    font-size: var(--fs-600);
+    font-weight: 300;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: f.rem(20);
+
+    .wrapper {
+      margin-top: f.rem(70);
+
+      .icon {
+        margin-bottom: f.rem(30);
+      }
+
+      .title {
+        color: var(--clr-primary-dark-blue);
+        font-size: var(--fs-500);
+        font-weight: 300;
+      }
+    }
+  }
+}

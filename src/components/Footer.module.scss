@@ -1,0 +1,32 @@
+@use '../styles/' as f;
+
+.footer {
+  background-color: var(--clr-primary-dark-blue);
+  display: flex;
+  justify-content: space-between;
+  height: f.rem(200);
+  padding: f.rem(40) f.rem(80);
+
+  .wrapper {
+    display: flex;
+    gap: f.rem(150);
+
+    .link-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: f.rem(80);
+      white-space: nowrap;
+
+      .link {
+        color: var(--clr-neutral-white);
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: .3s;
+      }
+
+      .link:hover {
+        color: var(--clr-primary-lime-green);
+      }
+    }
+  }
+}

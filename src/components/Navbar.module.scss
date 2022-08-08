@@ -6,6 +6,7 @@
   padding: f.rem(10) f.rem(70);
   background-color: var(--clr-neutral-white);
   justify-content: space-around;
+  z-index: 1;
   position: relative;
 
   .link-wrapper {

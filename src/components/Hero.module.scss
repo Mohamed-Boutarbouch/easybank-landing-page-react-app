@@ -6,9 +6,11 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   background-color: var(--clr-neutral-very-light-gray);
+  position: relative;
 
   .wrapper {
     color: var(--clr-primary-dark-blue);
+    padding: f.rem(165) 0 f.rem(165) 0;
 
     .heading {
       font-size: var(--fs-700);
@@ -26,6 +28,8 @@
     & .hero-illustration {
       transform: translateX(110px);
       overflow-x: hidden;
+      position: absolute;
+      inset: f.rem(-120) 0 0 f.rem(620);
     }
   }
 }

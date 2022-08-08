@@ -7,8 +7,9 @@
   text-align: center;
   text-transform: capitalize;
   font-weight: 700;
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
   white-space: nowrap;
+  align-self: start;
   transition: 0.3s;
   background-size: 200% auto;
   color: var(--clr-neutral-white);
@@ -16,8 +17,9 @@
   border-radius: f.rem(70);
   display: block;
   cursor: pointer;
+  transition: .3s;
 }
 
 .button:hover {
-  background-image: linear-gradient(to right, var(--clr-primary-bright-cyan), var(--clr-primary-lime-green));
+  background-image: linear-gradient(to right, var(--clr-primary-bright-cyan-hover), var(--clr-primary-lime-green-hover));
 }
