@@ -2,7 +2,7 @@
 
 .container {
   background-color: var(--clr-neutral-very-light-gray);
-  padding: f.rem(100) f.rem(70);
+  padding: f.rem(100) var(--space);
 
   .header {
     color: var(--clr-primary-dark-blue);
@@ -22,14 +22,27 @@
       overflow: hidden;
       color: var(--clr-neutral-grayish-blue);
 
+      .image-container{
+        position: relative;
+        overflow: hidden;
+        max-width: 300px;
+        z-index: 1;
+      }
+
       .image {
         width: 100%;
         height: 12rem;
         object-fit: cover;
+        transition: .3s;
+      }
+     
+      .image:hover {
+        transform: scale(1.2);
+        cursor: pointer;
       }
 
       .text-wrapper {
-        padding: f.rem(8) f.rem(20);
+        padding: f.rem(25) f.rem(20);
 
         .author {
           text-transform: capitalize;
@@ -38,7 +51,18 @@
 
         .title {
           color: var(--clr-primary-dark-blue);
+          padding-top: f.rem(10);
+          transition: .3s;
         }
+        
+        .title:hover {
+          color: var(--clr-primary-lime-green);
+          cursor: pointer;
+        }
+
+        .body-text {
+          font-size: var(--fs-300);
+        } 
       }
     }
   }

@@ -11,11 +11,13 @@ const Articles = () => {
           const { id, image, author, title, body } = article;
           return (
             <article key={id} className={styles.card}>
-              <img src={image} alt="/" className={styles.image} />
-              <div className={styles['text-wrapper']} >
+              <div className={styles['image-container']}>
+                <img src={image} alt="/" className={styles.image} />
+              </div>
+              <div className={styles['text-wrapper']}>
                 <span className={styles.author}>by {author}</span>
                 <h4 className={styles.title}>{title}</h4>
-                <p className={styles.body}>{body}...</p>
+                <p className={styles['body-text']}>{body}...</p>
               </div>
             </article>
           );

@@ -25,9 +25,9 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div>
+      <div className={styles['right-side']}>
         <ButtonCTA />
-        <p>&copy; easybank. all rights reserved</p>
+        <p className={styles.copyright}>&copy; easybank. all rights reserved</p>
       </div>
     </footer>
   );

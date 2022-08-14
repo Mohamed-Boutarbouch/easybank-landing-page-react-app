@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   height: f.rem(200);
-  padding: f.rem(40) f.rem(80);
+  padding: f.rem(40) var(--space);
 
   .wrapper {
     display: flex;
@@ -19,6 +19,7 @@
 
       .link {
         color: var(--clr-neutral-white);
+        font-size: var(--fs-300);
         text-decoration: none;
         text-transform: capitalize;
         transition: .3s;
@@ -27,6 +28,20 @@
       .link:hover {
         color: var(--clr-primary-lime-green);
       }
+    }
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+
+    .copyright {
+      color: var(--clr-neutral-grayish-blue);
+      text-transform: capitalize;
+      font-size: var(--fs-300);
     }
   }
 }

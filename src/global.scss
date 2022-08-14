@@ -13,14 +13,8 @@
   --clr-primary-lime-green: hsl(136, 65%, 51%);
   --clr-primary-bright-cyan: hsl(192, 70%, 51%);
 
-  --clr-primary-lime-green-hover: hsl(136, 61%, 64%);
+  --clr-primary-lime-green-hover: hsl(136, 58%, 55%);
   --clr-primary-bright-cyan-hover: hsl(192, 70%, 64%);
-
-  --clr-gradient: linear-gradient(
-    to right,
-    var(--clr-primary-lime-green),
-    var(--clr-primary-bright-cyan)
-  );
 
   --clr-neutral-grayish-blue: hsl(233, 8%, 62%);
   --clr-neutral-light-grayish-blue: hsl(220, 16%, 96%);
@@ -34,6 +28,7 @@
   --fs-900: 9.375rem;
   --fs-800: 6.25rem;
   --fs-700: 3.5rem;
+  --fs-650: 3rem;
   --fs-600: 2rem;
   --fs-500: 1.75rem;
   --fs-400: 1.125rem;
@@ -41,7 +36,7 @@
   --fs-200: 0.875rem;
 
   // spacing
-  // --space: clamp(f.rem(1), 90vw, f.rem(1120));
+  --space: 7.5rem;
 }
 
 /* ---------------------------- */

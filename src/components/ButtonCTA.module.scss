@@ -2,14 +2,12 @@
 
 .button {
   background-image: linear-gradient(to right, var(--clr-primary-lime-green) 0%, var(--clr-primary-bright-cyan) 50%);
-  margin: f.rem(10);
   padding: f.rem(15) f.rem(45);
   text-align: center;
   text-transform: capitalize;
   font-weight: 700;
   font-size: var(--fs-300);
   white-space: nowrap;
-  align-self: start;
   transition: 0.3s;
   background-size: 200% auto;
   color: var(--clr-neutral-white);

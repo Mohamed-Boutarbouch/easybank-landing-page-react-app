@@ -1,9 +1,9 @@
 @use '../styles/functions' as f;
 
 .container {
-  padding-left: f.rem(70);
+  padding-left: var(--space);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1.8fr;
   align-items: center;
   background-color: var(--clr-neutral-very-light-gray);
   position: relative;
@@ -15,15 +15,20 @@
     .heading {
       font-size: var(--fs-700);
       font-weight: 300;
+      line-height: 1.2;
     }
 
     .paragraph {
       color: var(--clr-neutral-grayish-blue);
+      padding: f.rem(10) 0;
     }
   }
 
   .background {
     background-image: url('../assets/bg-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 0 65%;
+    min-height: 100%;
 
     & .hero-illustration {
       transform: translateX(110px);

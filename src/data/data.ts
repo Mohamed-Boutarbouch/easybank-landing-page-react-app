@@ -85,9 +85,9 @@ export const articlesData: ArticlesTypes[] = [
 
 export const footerLinks: string[] = [
   'about us',
-  'contact',
-  'blog',
   'careers',
+  'contact',
   'support',
+  'blog',
   'privacy policy',
 ];

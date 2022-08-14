@@ -12,8 +12,10 @@ const Navbar = () => {
         <ul className={styles['link-list']}>
           {navLinks.map((link, index) => {
             return (
-              <li key={index}>
-                <a href="/" className={styles.link}>{link}</a>
+              <li key={index} className={styles.links}>
+                <a href="/" className={styles.link}>
+                  {link}
+                </a>
               </li>
             );
           })}

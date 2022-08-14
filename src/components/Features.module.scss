@@ -2,13 +2,15 @@
 
 .container {
   background-color: var(--clr-neutral-light-grayish-blue);
-  padding: f.rem(100) f.rem(70);
+  padding: f.rem(100) var(--space);
   color: var(--clr-neutral-grayish-blue);
 
-  .header h2 {
-    color: var(--clr-primary-dark-blue);
-    font-size: var(--fs-600);
-    font-weight: 300;
+  .header {
+    .heading {
+      color: var(--clr-primary-dark-blue);
+      font-size: var(--fs-650);
+      font-weight: 300;
+    }
   }
 
   .grid-container {
