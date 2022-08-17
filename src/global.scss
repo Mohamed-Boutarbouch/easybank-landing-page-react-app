@@ -1,5 +1,6 @@
 @forward './styles';
 @use './styles' as f;
+@use './styles/mixins' as u;
 
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
@@ -12,15 +13,17 @@
   --clr-primary-dark-blue: hsl(233, 26%, 24%);
   --clr-primary-lime-green: hsl(136, 65%, 51%);
   --clr-primary-bright-cyan: hsl(192, 70%, 51%);
-
+  
   --clr-primary-lime-green-hover: hsl(136, 58%, 55%);
   --clr-primary-bright-cyan-hover: hsl(192, 70%, 64%);
-
+  
   --clr-neutral-grayish-blue: hsl(233, 8%, 62%);
   --clr-neutral-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-neutral-very-light-gray: hsl(0, 0%, 98%);
   --clr-neutral-white: hsl(0, 0%, 100%);
-
+  
+  --clr-primary-dark-blue-transparent: hsl(233, 26%, 24%);
+  --clr-neutral-white-transparent: hsla(0, 0%, 100%, 0.205);
   /* Font Sizes */
   // You can use the property clamp if you want to:
   // clamp(28px, 16px + 2vw, 40rem) which is ==>
@@ -36,9 +39,26 @@
   --fs-200: 0.875rem;
 
   // spacing
-  --space: 7.5rem;
+  --space: 1.5rem;
 }
 
+@include u.breakpoint(md) {
+  :root {
+    --space: 3rem;
+  }
+}
+
+@include u.breakpoint(lg) {
+  :root {
+    --space: 4.5rem;
+  }
+}
+
+@include u.breakpoint(xl) {
+  :root {
+    --space: 6rem;
+  }
+}
 /* ---------------------------- */
 /* Reset                        */
 /* ---------------------------- */

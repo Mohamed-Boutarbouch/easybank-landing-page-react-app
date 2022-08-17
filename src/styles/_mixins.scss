@@ -1,19 +1,19 @@
 @use 'functions' as f;
 
 $breakpoints-up: (
-  'md': f.em(700),
-  'lg': f.em(900),
-  'xl': f.em(1440),
+  'md': f.em(500),
+  'lg': f.em(700),
+  'xl': f.em(1000),
 );
 
 $breakpoints-down: (
-  'sm': em(699.98),
-  'md': em(899.98),
-  'lg': em(1439.98),
+  'sm': f.em(499.98),
+  'md': f.em(699.98),
+  'lg': f.em(1239.98),
 );
 
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+  @media screen and (min-width: map-get($breakpoints-up, $size)) {
     @content;
   }
 }

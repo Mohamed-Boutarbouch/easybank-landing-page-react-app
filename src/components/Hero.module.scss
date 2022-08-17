@@ -34,7 +34,8 @@
       transform: translateX(110px);
       overflow-x: hidden;
       position: absolute;
-      inset: f.rem(-120) 0 0 f.rem(620);
+      // inset: f.rem(-120) 0 0 f.rem(620);
+      inset: f.rem(-120) 0 0 46%;
     }
   }
 }
