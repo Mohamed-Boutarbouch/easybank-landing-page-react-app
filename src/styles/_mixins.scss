@@ -1,15 +1,15 @@
 @use 'functions' as f;
 
 $breakpoints-up: (
-  'md': f.em(500),
-  'lg': f.em(700),
+  'md': f.em(550),
+  'lg': f.em(750),
   'xl': f.em(1000),
 );
 
 $breakpoints-down: (
-  'sm': f.em(499.98),
-  'md': f.em(699.98),
-  'lg': f.em(1239.98),
+  'sm': f.em(549.98),
+  'md': f.em(749.98),
+  'lg': f.em(999.98),
 );
 
 @mixin breakpoint($size) {

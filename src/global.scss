@@ -39,18 +39,18 @@
   --fs-200: 0.875rem;
 
   // spacing
-  --space: 1.5rem;
+  --space: 2rem;
 }
 
 @include u.breakpoint(md) {
   :root {
-    --space: 3rem;
+    --space: 2.5rem;
   }
 }
 
 @include u.breakpoint(lg) {
   :root {
-    --space: 4.5rem;
+    --space: 3rem;
   }
 }
 

@@ -1,4 +1,5 @@
 @use '../styles/' as f;
+@use '../styles/mixins' as u;
 
 .icons {
   width: f.rem(200);
@@ -6,17 +7,34 @@
   grid-template-rows: repeat(2, 1fr);
   row-gap: f.rem(40);
 
+  .main-icon-wrapper {
+    width: 100%;
+  }
+
+  @include u.breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
   .logo {
     fill: #fff;
   }
 
   .social-icon {
-    align-self: flex-start;
-
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     cursor: pointer;
+    width: 100%;
+
+    @include u.breakpoint-down(md) {
+      justify-content: space-around;
+      align-items: flex-start;
+      margin: 0 auto;
+    }
 
     .icon {
       fill: #fff;
@@ -28,14 +46,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 800px) {
-//   .icons {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: flex-start;
-//     cursor: pointer;
-//     width: 50%;
-//     margin: 0 auto;
-//   }
-// }

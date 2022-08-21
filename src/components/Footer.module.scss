@@ -1,47 +1,100 @@
 @use '../styles/' as f;
+@use '../styles/mixins' as u;
 
 .footer {
   background-color: var(--clr-primary-dark-blue);
   display: flex;
   justify-content: space-between;
-  height: f.rem(200);
+  min-height: f.rem(200);
   padding: f.rem(40) var(--space);
 
-  .wrapper {
+  @include u.breakpoint-down(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  // .logos {
+  //   width: 100%;
+
+  //   @include u.breakpoint-down(lg) {
+  //     max-width: 0 auto;
+  //   }
+  // }
+
+  .links {
     display: flex;
-    gap: f.rem(150);
+    justify-content: space-between;
+    white-space: nowrap;
 
-    .link-wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: f.rem(80);
-      white-space: nowrap;
+    @include u.breakpoint-down(md) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-      .link {
-        color: var(--clr-neutral-white);
-        font-size: var(--fs-300);
-        text-decoration: none;
-        text-transform: capitalize;
-        transition: .3s;
+    ul {
+      list-style: none;
+      list-style-position: inside;
+      padding-left: 0;
+
+      @include u.breakpoint-down(md) {
+        margin-bottom: 0;
+        margin-top: 0;
       }
 
-      .link:hover {
-        color: var(--clr-primary-lime-green);
+      li {
+        margin-bottom: f.rem(10);
       }
+    }
+
+    ul:first-child {
+      margin-left: 8vw;
+      margin-right: 8vw;
+
+      @include u.breakpoint-down(md) {
+        margin: f.rem(30) 0 0% 0;
+      }
+    }
+
+    ul:last-child {
+      @include u.breakpoint-down(md) {
+        margin-bottom: f.rem(30);
+      }
+    }
+
+    .link {
+      color: var(--clr-neutral-white);
+      text-decoration: none;
+      font-size: var(--fs-300);
+      text-transform: capitalize;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      color: var(--clr-primary-lime-green);
     }
   }
 
-  .right-side {
+  .copyright {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
 
-    .copyright {
+    @include u.breakpoint-down(md) {
+      align-items: center;
+      text-align: center;
+    }
+
+    p {
       color: var(--clr-neutral-grayish-blue);
       text-transform: capitalize;
       font-size: var(--fs-300);
+
+      @include u.breakpoint-down(md) {
+        margin-top: f.rem(30);
+      }
     }
   }
 }

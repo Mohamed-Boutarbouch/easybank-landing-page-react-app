@@ -1,4 +1,5 @@
 @use '../styles/' as f;
+@use '../styles/mixins' as u;
 
 .container {
   background-color: var(--clr-neutral-light-grayish-blue);
@@ -6,10 +7,20 @@
   color: var(--clr-neutral-grayish-blue);
 
   .header {
+    @include u.breakpoint-down(md) {
+      text-align: center;
+    }
+
     .heading {
       color: var(--clr-primary-dark-blue);
       font-size: var(--fs-650);
       font-weight: 300;
+    }
+
+    .paragraph br {
+      @include u.breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
@@ -18,11 +29,22 @@
     grid-template-columns: repeat(4, 1fr);
     gap: f.rem(20);
 
+    @include u.breakpoint-down(md) {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
     .wrapper {
       margin-top: f.rem(70);
 
       .icon {
         margin-bottom: f.rem(30);
+
+        @include u.breakpoint-down(md) {
+          display:inline-flex;
+          align-self: center;
+        }
       }
 
       .title {

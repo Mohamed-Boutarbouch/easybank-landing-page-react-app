@@ -6,28 +6,36 @@ import { footerLinks } from '../data/data';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.wrapper}>
+      <div className={styles.logos}>
         <FooterSocialLinks />
-        <div className={styles['link-wrapper']}>
+      </div>
+      <div className={styles.links}>
+        <ul>
           {footerLinks.slice(0, 3).map((link, index) => {
             return (
-              <a key={index} href="/" className={styles.link}>
-                {link}
-              </a>
+              <li key={index}>
+                <a href="/" className={styles.link}>
+                  {link}
+                </a>
+              </li>
             );
           })}
+        </ul>
+        <ul>
           {footerLinks.slice(3, 6).map((link, index) => {
             return (
-              <a key={index} href="/" className={styles.link}>
-                {link}
-              </a>
+              <li key={index}>
+                <a href="/" className={styles.link}>
+                  {link}
+                </a>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
-      <div className={styles['right-side']}>
+      <div className={styles.copyright}>
         <ButtonCTA />
-        <p className={styles.copyright}>&copy; easybank. all rights reserved</p>
+        <p>&copy; Easybank. All rights reserved.</p>
       </div>
     </footer>
   );

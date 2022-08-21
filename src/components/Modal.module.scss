@@ -18,7 +18,7 @@
 .modal-wrapper {
   z-index: 2;
   background-color: var(--clr-neutral-white);
-  width: 80vw;
+  width: calc(92vw - var(--space));
   border-radius: f.rem(5);
 
   position: fixed;
@@ -64,21 +64,3 @@
     }
   }
 }
-
-// @include u.breakpoint(md) {
-//   .modal-wrapper {
-//     width: calc(100vw - var(--space));
-//   }
-// }
-
-// @include u.breakpoint(lg) {
-//   .modal-wrapper {
-//     width: calc(100vw - var(--space));
-//   }
-// }
-
-// @include u.breakpoint(xl) {
-//   .modal-wrapper {
-//     width: calc(100vw - var(--space));
-//   }
-// }

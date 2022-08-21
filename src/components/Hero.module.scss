@@ -1,4 +1,5 @@
 @use '../styles/functions' as f;
+@use '../styles/mixins' as u;
 
 .container {
   padding-left: var(--space);
@@ -8,9 +9,21 @@
   background-color: var(--clr-neutral-very-light-gray);
   position: relative;
 
+  @include u.breakpoint-down(md) {
+    display: flex;
+    flex-direction: column-reverse;
+    background-position: 0;
+    background-repeat: no-repeat;
+  }
+
   .wrapper {
     color: var(--clr-primary-dark-blue);
     padding: f.rem(165) 0 f.rem(165) 0;
+    
+    @include u.breakpoint-down(md) {
+      padding: f.rem(165) var(--space) f.rem(165) 0;
+      text-align: center;
+    }
 
     .heading {
       font-size: var(--fs-700);
@@ -30,12 +43,21 @@
     background-position: 0 65%;
     min-height: 100%;
 
+    @include u.breakpoint-down(md) {
+      background-image: url('../assets/bg-intro-mobile.svg');
+      background-position: 0;
+      z-index: 1;
+      background-size: contain;
+    }
+
     & .hero-illustration {
-      transform: translateX(110px);
-      overflow-x: hidden;
-      position: absolute;
-      // inset: f.rem(-120) 0 0 f.rem(620);
-      inset: f.rem(-120) 0 0 46%;
+    //   transform: translateX(110px);
+    //   overflow-x: hidden;
+    //   position: absolute;
+    //   inset: f.rem(-120) 0 0 46%;
+
+      @include u.breakpoint-down(md) {
+      }
     }
   }
 }
