@@ -6,9 +6,7 @@ import { footerLinks } from '../data/data';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.logos}>
-        <FooterSocialLinks />
-      </div>
+      <FooterSocialLinks />
       <div className={styles.links}>
         <ul>
           {footerLinks.slice(0, 3).map((link, index) => {

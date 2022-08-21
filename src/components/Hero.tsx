@@ -12,7 +12,9 @@ const Hero = () => {
           Take your financial life online. Your Easybank account will be a one-stop-shop for
           spending, saving, budgeting, investing, and much more.
         </p>
-        <ButtonCTA />
+        <div className={styles['button-wrapper']}>
+          <ButtonCTA />
+        </div>
       </div>
       <div className={styles.background}>
         <img src={heroIllustration} alt="/" className={styles['hero-illustration']} />

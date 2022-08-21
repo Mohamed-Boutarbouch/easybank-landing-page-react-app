@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import styles from './Navbar.module.scss';
 import Logo from '../assets/logo.svg';
 import ListIcon from '../assets/icon-hamburger.svg';
