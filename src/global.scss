@@ -9,7 +9,6 @@
 /* ---------------------------- */
 :root {
   /* Colors */
-  /* This is the modern way of writing hsl values to do an alpha trick (see example colors section)  */
   --clr-primary-dark-blue: hsl(233, 26%, 24%);
   --clr-primary-lime-green: hsl(136, 65%, 51%);
   --clr-primary-bright-cyan: hsl(192, 70%, 51%);
@@ -24,41 +23,19 @@
   
   --clr-primary-dark-blue-transparent: hsl(233, 26%, 24%);
   --clr-neutral-white-transparent: hsla(0, 0%, 100%, 0.205);
+
   /* Font Sizes */
-  // You can use the property clamp if you want to:
-  // clamp(28px, 16px + 2vw, 40rem) which is ==>
-  // clamp(1.75rem, 1rem + 2vw, 2.5rem)
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-650: 3rem;
-  --fs-600: 2rem;
-  --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
-  --fs-300: 1rem;
-  --fs-200: 0.875rem;
+  --fs-200: clamp(0.844rem, 0.8233rem + 0.0919vw, 0.906rem);
+  --fs-300: clamp(0.938rem, 0.8963rem + 0.1852vw, 1.063rem);
+  --fs-400: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+  --fs-500: clamp(1.5rem, 1.3333rem + 0.7407vw, 2rem);
+  --fs-600: clamp(1.5rem, 1.1667rem + 1.4815vw, 2.5rem);
+  --fs-700: clamp(1.875rem, 0.7500rem + 5.0000vw, 3.375rem);
 
   // spacing
-  --space: 2rem;
+  --space: clamp(2rem, 0.6667rem + 5.9259vw, 6rem);
 }
 
-@include u.breakpoint(md) {
-  :root {
-    --space: 2.5rem;
-  }
-}
-
-@include u.breakpoint(lg) {
-  :root {
-    --space: 3rem;
-  }
-}
-
-@include u.breakpoint(xl) {
-  :root {
-    --space: 6rem;
-  }
-}
 /* ---------------------------- */
 /* Reset                        */
 /* ---------------------------- */

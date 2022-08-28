@@ -11,6 +11,10 @@
   min-height: f.rem(60);
   z-index: 2;
 
+  .logo {
+    cursor: pointer;
+  }
+
   @include u.breakpoint(xl) {
     min-height: f.rem(80);
   }
@@ -56,6 +60,7 @@
 
           .link:hover {
             color: var(--clr-primary-dark-blue);
+            transition: .8s;
           }
 
           .link:hover::after {
@@ -68,7 +73,7 @@
               var(--clr-primary-bright-cyan) 50%
             );
             position: absolute;
-            top: 51px;
+            top: 186%;
             left: 0;
           }
         }

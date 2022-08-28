@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.container}>
-      <img src={Logo} alt="" />
+      <img src={Logo} alt="" className={styles.logo} />
       <div className={styles['link-wrapper']}>
         <ul className={styles['link-list']}>
           {navLinks.map((link, index) => {
